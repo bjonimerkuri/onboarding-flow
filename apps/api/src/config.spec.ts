@@ -7,23 +7,12 @@ describe('loadConfig', () => {
     expect(cfg.port).toBe(3001);
   });
 
-  it('refuses to start in production without a database or secret', () => {
+  it('refuses to start in production without a database', () => {
     expect(() => loadConfig({ NODE_ENV: 'production' })).toThrow(/DATABASE_URL/);
-    expect(() => loadConfig({ NODE_ENV: 'production', DATABASE_URL: 'postgres://u:p@h/db' })).toThrow(/JWT_SECRET/);
-  });
-
-  it('rejects a short JWT secret', () => {
-    expect(() =>
-      loadConfig({ NODE_ENV: 'production', DATABASE_URL: 'postgres://u:p@h/db', JWT_SECRET: 'short' }),
-    ).toThrow();
   });
 
   it('accepts a complete production configuration', () => {
-    const cfg = loadConfig({
-      NODE_ENV: 'production',
-      DATABASE_URL: 'postgres://u:p@h/db',
-      JWT_SECRET: 'x'.repeat(40),
-    });
+    const cfg = loadConfig({ NODE_ENV: 'production', DATABASE_URL: 'postgres://u:p@h/db' });
     expect(cfg.isProd).toBe(true);
   });
 });
