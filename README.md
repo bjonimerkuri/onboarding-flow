@@ -10,9 +10,7 @@ step again, progress that survives a reload, and a funnel report that shows wher
 
 **[Live demo](https://REPLACE-WITH-YOUR-VERCEL-URL.vercel.app)** · [funnel insights](https://REPLACE-WITH-YOUR-VERCEL-URL.vercel.app/insights)
 
-| Step 1 | Step 2 | Funnel insights |
-|---|---|---|
-| ![Step 1](docs/screenshots/step-1.png) | ![Step 2](docs/screenshots/step-2.png) | ![Insights](docs/screenshots/insights.png) |
+
 
 ## What is interesting here
 
@@ -69,7 +67,6 @@ npm run dev               # web http://localhost:3000, API http://localhost:3001
 | `npm test` / `npm run test:coverage` | Unit tests for the step rules and config |
 | `npm run test:int` | API integration tests against PostgreSQL |
 | `npm run e2e` | Playwright end-to-end tests (builds and starts both servers, resets the database) |
-| `npm run screenshots` | Regenerates the images above into `docs/screenshots` |
 | `npm run db:migrate` / `db:reset` | Apply migrations; wipe all sessions (never in production) |
 
 ## Testing strategy
@@ -98,23 +95,7 @@ locally).
 
 Validation failures return `400 { "message": ["...", "..."] }` with every problem on the step.
 
-## Deploy to Vercel
 
-1. Push the repo to GitHub and import it in Vercel. Set **Framework Preset** to *Other*. The build settings come from
-   [`vercel.json`](vercel.json).
-2. In the project, open **Storage** (Marketplace) and add **Neon Postgres**. This sets `DATABASE_URL` for production
-   and creates an isolated database branch for each preview deployment.
-3. No other variables are needed: this app has no accounts or secrets.
-4. Deploy. The build compiles the API, runs migrations, builds the Next.js static export, and publishes `/api` as a
-   function.
-5. Put the live URL at the top of this README and replace `bjonimerkuri` in the badges.
-
-## Decisions and trade-offs
-
-- [Validation on the server, mirrored in the browser](docs/adr/0001-validation-on-the-server.md)
-- [JSONB progress and row locking](docs/adr/0002-jsonb-progress-and-row-locking.md)
-- [Anonymous sessions and their limits](docs/adr/0003-anonymous-sessions.md)
-- [Static export and one Vercel project](docs/adr/0004-static-export-and-one-vercel-project.md)
 
 
 ## License
