@@ -1,7 +1,7 @@
 # Onboarding Flow
 
-[![CI](https://github.com/bjonimerkuri/onboarding-flow/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/onboarding-flow/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/bjonimerkuri/onboarding-flow/actions/workflows/codeql.yml/badge.svg)](https://github.com/OWNER/onboarding-flow/actions/workflows/codeql.yml)
+[![CI](https://github.com/bjonimerkuri/onboarding-flow/actions/workflows/ci.yml/badge.svg)](https://github.com/bjonimerkuri/onboarding-flow/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/bjonimerkuri/onboarding-flow/actions/workflows/codeql.yml/badge.svg)](https://github.com/bjonimerkuri/onboarding-flow/actions/workflows/codeql.yml)
 ![Node](https://img.shields.io/badge/node-20-339933)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
@@ -107,7 +107,7 @@ Validation failures return `400 { "message": ["...", "..."] }` with every proble
 3. No other variables are needed: this app has no accounts or secrets.
 4. Deploy. The build compiles the API, runs migrations, builds the Next.js static export, and publishes `/api` as a
    function.
-5. Put the live URL at the top of this README and replace `OWNER` in the badges.
+5. Put the live URL at the top of this README and replace `bjonimerkuri` in the badges.
 
 ## Decisions and trade-offs
 
