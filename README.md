@@ -8,7 +8,7 @@
 A multi-step onboarding flow built as a full product loop: a UI that validates as you type, an API that validates every
 step again, progress that survives a reload, and a funnel report that shows where people stop.
 
-**[Live demo](https://REPLACE-WITH-YOUR-VERCEL-URL.vercel.app)** · [funnel insights](https://REPLACE-WITH-YOUR-VERCEL-URL.vercel.app/insights)
+**[Live demo](https://onboarding-flow-xi.vercel.app/)** · [funnel insights](https://onboarding-flow-xi.vercel.app//insights)
 
 
 
