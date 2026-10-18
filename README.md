@@ -1,7 +1,7 @@
 # Onboarding Flow
 
-[![CI](https://github.com/OWNER/onboarding-flow/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/onboarding-flow/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/OWNER/onboarding-flow/actions/workflows/codeql.yml/badge.svg)](https://github.com/OWNER/onboarding-flow/actions/workflows/codeql.yml)
+[![CI](https://github.com/bjonimerkuri/onboarding-flow/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/onboarding-flow/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/bjonimerkuri/onboarding-flow/actions/workflows/codeql.yml/badge.svg)](https://github.com/OWNER/onboarding-flow/actions/workflows/codeql.yml)
 ![Node](https://img.shields.io/badge/node-20-339933)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
@@ -116,13 +116,6 @@ Validation failures return `400 { "message": ["...", "..."] }` with every proble
 - [Anonymous sessions and their limits](docs/adr/0003-anonymous-sessions.md)
 - [Static export and one Vercel project](docs/adr/0004-static-export-and-one-vercel-project.md)
 
-## Roadmap
-
-- [ ] Share step schemas between server and client instead of keeping two copies
-- [ ] Bind sessions to a signed cookie, or to the account created at the end
-- [ ] Shared rate-limit store; protect the funnel endpoint
-- [ ] Time-per-step analytics and a per-day funnel
-- [ ] Server rendering and a nonce-based CSP if the app grows beyond the flow
 
 ## License
 
